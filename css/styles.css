@@ -1,0 +1,49 @@
+/* animaciones.css */
+
+.btn-anim {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-anim.clicked {
+    transform: scale(0.95);
+    opacity: 0.7;
+}
+
+.user-card h2 {
+    font-weight: bold;
+}
+/* Grid base */
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    height: 400px; /* Ajusta según necesidad */
+    width: 100%;
+}
+
+/* Estado normal */
+.div1 {
+    grid-column: span 1;
+    grid-row: span 1;
+    transition: all 0.4s ease;
+    background-color: #ccc; /* solo para visualizar */
+    cursor: pointer;
+}
+
+/* Al hacer clic, se expande */
+.div1.expandido {
+    grid-column: span 5;
+    grid-row: span 5;
+    background-color: #aaa; /* cambia color si quieres */
+}
+.user-card {
+    transition: all 0.4s ease;
+}
+
+/* Se expande al hacer clic */
+.user-card.expandido {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
